@@ -165,7 +165,7 @@ We are including visual documentation of the development and testing process.
 
 This repository is intended for educational, research and prototype development purposes.
 
-The AES key is intentionally not committed. Before compiling, copy the relevant node's `secrets.example.h` to `secrets.h` in the same folder and configure the same securely generated 16-byte key on both nodes. `secrets.h` is ignored by Git. The example key is only a placeholder and must never be used for real communication. A production deployment requires secure key provisioning, rotation and storage. Users must independently verify frequency, transmission power and applicable spectrum regulations before operating the hardware.
+The AES key is intentionally not committed. Before compiling, copy each node's `secrets.example.h` to `secrets.h` in the same folder. Configure the same securely generated 16-byte AES key on both nodes and set a strong, private Wi-Fi AP password for each node. `secrets.h` is ignored by Git. The example AES key and Wi-Fi password are placeholders and must never be used for real communication. A production deployment requires secure key provisioning, rotation and storage. Users must independently verify frequency, transmission power and applicable spectrum regulations before operating the hardware.
 
 ## Project Team
 
