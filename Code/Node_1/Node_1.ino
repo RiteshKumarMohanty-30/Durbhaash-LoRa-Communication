@@ -36,7 +36,7 @@ v4 changes:
 #define DEST_ID 2
 
 const char* AP_NAME = "Durbhaash_Node1";
-const char* AP_PASSWORD = "LoRa12345";
+const char* AP_PASSWORD = WIFI_AP_PASSWORD;
 
 // ============================================================
 // LORA CONFIG  (must be IDENTICAL on Node 1 and Node 2)
