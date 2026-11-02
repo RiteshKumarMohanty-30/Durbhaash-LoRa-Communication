@@ -131,6 +131,17 @@ We are including visual documentation of the development and testing process.
 - **3D Case Designs:** CAD and STL files of the custom enclosure.
 - **Source Code:** Firmware for both communication nodes.
 
+## Build and Upload
+
+1. Install the ESP32 board support package for the Heltec WiFi LoRa 32 V3 in Arduino IDE.
+2. Install the **RadioLib** and **U8g2** libraries.
+3. Open `Code/Node_1/Node_1.ino` for Node 1 or `Code/Node_2/Node_2.ino` for Node 2.
+4. In that node folder, copy `secrets.example.h` to a new file named `secrets.h`.
+5. Edit `secrets.h`: set a securely generated 16-byte AES key (use the same key on both nodes) and a private Wi-Fi AP password.
+6. Select the Heltec WiFi LoRa 32 V3 board and the correct serial port, then compile and upload each node separately.
+
+Do not upload your local `secrets.h` files. The repository's `.gitignore` excludes them.
+
 ## How It Works
 
 1. Power on both LoRa communication nodes.
@@ -165,7 +176,7 @@ We are including visual documentation of the development and testing process.
 
 This repository is intended for educational, research and prototype development purposes.
 
-The AES key is intentionally not committed. Before compiling, copy each node's `secrets.example.h` to `secrets.h` in the same folder. Configure the same securely generated 16-byte AES key on both nodes and set a strong, private Wi-Fi AP password for each node. `secrets.h` is ignored by Git. The example AES key and Wi-Fi password are placeholders and must never be used for real communication. A production deployment requires secure key provisioning, rotation and storage. Users must independently verify frequency, transmission power and applicable spectrum regulations before operating the hardware.
+The AES key is intentionally not committed. Before compiling, copy each node's `secrets.example.h` to `secrets.h` in the same folder. Configure the same securely generated 16-byte AES key on both nodes and set a strong, private Wi-Fi AP password for each node. `secrets.h` is ignored by Git. The example AES key and Wi-Fi password are placeholders and must never be used for real communication. One large front-case STL is still available in the [previous project repository](https://github.com/RiteshKumarMohanty-30/SECURE-LOW-POWER-RADIO-COMMUNICATION-PROTOCOL-OVER-LoRa-Durbhaash-/blob/main/Case%20Front%20V1.3.1%20DB.stl) because the transfer service could not carry that large file into this repository. A production deployment requires secure key provisioning, rotation and storage. Users must independently verify frequency, transmission power and applicable spectrum regulations before operating the hardware.
 
 ## Project Team
 
