@@ -1,0 +1,25 @@
+# Arduino / ESP32 build artifacts
+.build/
+.cache/
+*.o
+*.a
+*.elf
+*.bin
+*.hex
+*.map
+*.ino.elf
+*.ino.bin
+
+# PlatformIO
+.pio/
+
+# Local IDE / OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+
+# Local cryptographic secrets - DO NOT COMMIT
+**/secrets.h
+secrets.h
